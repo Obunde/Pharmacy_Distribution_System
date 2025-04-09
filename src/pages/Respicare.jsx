@@ -1,35 +1,18 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import DrugsTable from '../components/DrugesTable';
+
+const dummyData = [
+    { name: 'Paracetamol', quantity: 100, price: 50, salesperson: 'John Doe' },     
+    { name: 'Amoxicillin', quantity: 120, price: 100, salesperson: 'Jane Akumu' },
+    { name: 'Ibuprofen', quantity: 80, price: 75, salesperson: 'Mark Otieno' },
+    { name: 'Ciprofloxacin', quantity: 60, price: 120, salesperson: 'Sarah Wanjiru' },
+    { name: 'Metformin', quantity: 150, price: 200, salesperson: 'David Mwangi' },
+]
 
 const Respicare = () => {
     return (
-        <div>
-            <h1>Respicare Page</h1>
-            <p>Drugs List & Salesperson Information</p>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Drug Name</th>
-                        <th>Salesperson</th>
-                        <th>Sales</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Paracetamol</td>
-                        <td>John Doe</td>
-                        <td>500</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Amoxicillin</td>
-                        <td>Jane Smith</td>
-                        <td>300</td>
-                    </tr>
-                </tbody>
-            </Table>
+        <div className="container mt-4">
+            <DrugsTable title="Respicare Drug List" drugs={dummyData} />
         </div>
     );
 };

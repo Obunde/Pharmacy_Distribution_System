@@ -1,18 +1,19 @@
 import React from 'react';
-import { ProgressBar } from 'react-bootstrap';
+import PerformanceBar from '../components/PerfomanceBar';
+
+const performanceData = [
+    { employee: 'Jane Doe', value: 80 },
+    { employee: 'John Smith', value: 65 },
+    { employee: 'Mary Johnson', value: 90 },
+];
 
 const EmployeePerformance = () => {
     return (
-        <div>
-            <h1>Employee Performance</h1>
-            <div className="mb-3">
-                <h5>John Doe</h5>
-                <ProgressBar now={80} label="80%" />
-            </div>
-            <div className="mb-3">
-                <h5>Jane Smith</h5>
-                <ProgressBar now={65} label="65%" />
-            </div>
+        <div className="container mt-4">
+            <h2>Employee Performance</h2>
+            {performanceData.map((data, index) => (
+                <PerformanceBar key={index} employee={data.employee} value={data.value} />
+            ))}
         </div>
     );
 };
