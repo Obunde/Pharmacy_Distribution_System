@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 
 const OverallSales = () => {
     return (
-        <div>
+        <div className="container mt-5 pt-4">
             <h1>Overall Sales</h1>
             <Table striped bordered hover>
                 <thead>

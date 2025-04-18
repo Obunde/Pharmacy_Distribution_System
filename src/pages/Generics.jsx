@@ -11,7 +11,7 @@ const dummyData = [
 
 const Generics = () => {
     return (
-        <div className="container mt-4">
+        <div className="container mt-5 pt-4">
             <DrugsTable title="Generics Drug List" drugs={dummyData} />
         </div>
     );

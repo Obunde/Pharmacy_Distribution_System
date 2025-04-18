@@ -9,7 +9,7 @@ const performanceData = [
 
 const EmployeePerformance = () => {
     return (
-        <div className="container mt-4">
+        <div className="container mt-5 pt-4">
             <h2>Employee Performance</h2>
             {performanceData.map((data, index) => (
                 <PerformanceBar key={index} employee={data.employee} value={data.value} />

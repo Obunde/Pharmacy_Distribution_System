@@ -9,7 +9,7 @@ const dummyData = [
 
 const Alidac = () => {
     return (
-        <div className='container mt-4'>
+        <div className='container mt-5 pt-4'>
             <DrugsTable title="Alidac Drugs" drugs={dummyData} />
         </div>
     );
